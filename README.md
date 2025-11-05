@@ -1,12 +1,25 @@
-# ogre-curriculum
+# Curriculum Structure
 
-> Repositório do projeto **The Ogre Project**.
+Content is organized by tracks → modules → lessons/projects.
 
-- **Org:** `the-ogre-project`
-- **Propósito:** ver o README da organização e o blueprint do projeto.
-- **Licenças:** ver abaixo.
+```
+/tracks/{track-id}/
+modules/{mod-id}-{slug}/
+lessons/{lesson-id}-{slug}.md
+projects/{project-id}-{slug}.md
+/templates/
+```
 
-## Licença
 
-This work is licensed under a Creative Commons Attribution 4.0 International License (CC BY 4.0).
-See: https://creativecommons.org/licenses/by/4.0/
+## Front-matter schema (minimum)
+- `id` (string, e.g., "ADV-201-L01")
+- `title` (string)
+- `track` (string) and `module` (string)
+- `type` ("lesson" | "project" | "resource")
+- `prerequisites` (string[]), `outcomes` (string[])
+- `time_suggested` (number, hours)
+- `resources` ({title, url, license}[])
+- `knowledge_check` ({q, a[]}[]) — optional
+- `attribution` (string) — translations/derivatives
+
+All written content is **CC BY 4.0**.
